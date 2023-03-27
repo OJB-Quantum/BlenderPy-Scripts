@@ -5,6 +5,7 @@ Once the tab is opened, you can load a copy of Python scripts in directly throug
 
 Blender keeps track of all your actions in the program, so you should be able to automate any set of steps or make them repeatable and exportable by experimenting with the directions above.
 
+Of course for atomic or molecular modeling, you can used a free program like Avogadro2 or MolView for the initial computation/ export to a .mol file that can be converted into .pdb file format by other free programs like OpenBabel. The flow goes like this: Calculate model >> export .mol file >> import .mol into converter (OpenBabel) >> export .pdb >> import .pdb into Blender. (Make sure that the Atomic Blender add-on is enabled under EDIT tab >> PREFERENCES so that you can import a .pdb file). Enjoy. 
 
 
 ![Screenshot 2023-03-27 073147](https://user-images.githubusercontent.com/88035770/227973246-258a7ede-ee07-4eb2-80b0-53905947d27e.png)
