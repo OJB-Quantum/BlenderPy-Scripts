@@ -4,7 +4,7 @@ For atomic or molecular modeling, you can use a free program like Avogadro2 or M
 Example of the workflow goes like this: calculate model >> export .mol file >> import .mol into converter (OpenBabel) >> export .pdb >> import .pdb into Blender >> adjust model geometry attributes as needed >> configure render settings >> render. 
 (Make sure that the Atomic Blender add-on is enabled under EDIT tab >> PREFERENCES so that you can import a .pdb file).
 
-The SCRIPTING tab in Blender can be found on the upper-right-hand side of the interface. Once the tab is opened, you can load a copy of Python scripts in directly through copy-paste. It is also possible to copy the code on the left-side of the scripting interface by selecting the INFO button, pressing SELECT ALL, Ctrl + C, then Ctrl + V on the main scripting panel found directly under the SCRIPTING tab. Before running the script, be sure to check that the command "import bpy" is inserted at the top of the script. 
+The SCRIPTING tab in Blender can be found on the upper-right-hand side of the interface. Once the tab is opened, you can load a copy of Python scripts in directly through copy-paste. It is also possible to copy the code on the left-side of the scripting interface by selecting the INFO button, pressing SELECT ALL, Ctrl + C, then Ctrl + V on the main scripting panel found directly under the SCRIPTING tab. Before running the script, be sure to check that the command "import bpy" is inserted at the top of the script. If it's not there, type it in.
 
 Blender keeps track of all your actions in the program, so you should be able to automate any set of steps or make them repeatable and exportable by experimenting with the directions above. 
 
