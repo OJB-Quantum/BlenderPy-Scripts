@@ -15,7 +15,7 @@ Also, I have a free Flickr album of some rendered objects available: https://www
 
 _______________________________________________________________________________________________________________________________________________________________________
 
-Links to programs used in the workflow:
+Links to programs used in the workflow example:
 
 Avogadro2: https://github.com/openchemistry/avogadrolibs
 
