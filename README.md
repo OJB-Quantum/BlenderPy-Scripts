@@ -9,18 +9,21 @@ The SCRIPTING tab in Blender can be found on the upper-right-hand side of the in
 Blender keeps track of all your actions in the program, so you should be able to automate any set of steps or make them repeatable and exportable by experimenting with the directions above. 
 
 Enjoy. 
+_______________________________________________________________________________________________________________________________________________________________________
 
 Also, I have a free Flickr album of some rendered objects available: https://www.flickr.com/photos/194516106@N05/albums
 
-
+_______________________________________________________________________________________________________________________________________________________________________
 
 Links to programs used in the workflow:
+
 Avogadro2: https://github.com/openchemistry/avogadrolibs
 
 MolView: https://molview.org
 
 Open Babel: https://github.com/openbabel/openbabel/releases/tag/openbabel-3-1-1
 
+_______________________________________________________________________________________________________________________________________________________________________
 
 
 ![Screenshot 2023-03-27 073147](https://user-images.githubusercontent.com/88035770/227973246-258a7ede-ee07-4eb2-80b0-53905947d27e.png)
