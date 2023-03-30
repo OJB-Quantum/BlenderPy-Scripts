@@ -20,7 +20,4 @@ Enjoy.
 ![Screenshot 2023-03-27 091657](https://user-images.githubusercontent.com/88035770/228775472-7f24bae2-b840-4d99-af93-87f24ca062c9.png)
 
 
-![Screenshot 2023-03-27 073032](https://user-images.githubusercontent.com/88035770/227973303-191839dc-8343-4df0-8196-9dc46e84a769.png)
-
-
 If you need more learning resources on using Blender for scientific purposes, this is a great channel to start with: https://youtu.be/gAQxwNUH3JA
