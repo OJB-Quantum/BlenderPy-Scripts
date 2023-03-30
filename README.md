@@ -10,6 +10,8 @@ Blender keeps track of all your actions in the program, so you should be able to
 
 Enjoy. 
 
+Also, I have a free Flickr album of some rendered objects available: https://www.flickr.com/photos/194516106@N05/albums
+
 
 ![Screenshot 2023-03-27 073147](https://user-images.githubusercontent.com/88035770/227973246-258a7ede-ee07-4eb2-80b0-53905947d27e.png)
 
@@ -18,6 +20,10 @@ Enjoy.
 
 
 ![Screenshot 2023-03-27 091657](https://user-images.githubusercontent.com/88035770/228775472-7f24bae2-b840-4d99-af93-87f24ca062c9.png)
+
+
+![Caffeine in 4K with white bkgnd (2)](https://user-images.githubusercontent.com/88035770/228815450-ed9df092-184b-4560-8de3-5a4cabe3c296.png)
+
 
 
 If you need more learning resources on using Blender for scientific purposes, this is a great channel to start with: https://youtu.be/gAQxwNUH3JA
