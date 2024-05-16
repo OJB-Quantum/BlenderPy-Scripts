@@ -1,7 +1,7 @@
 # BlenderPy-Scripts-for-Science
 For atomic or molecular modeling, you can use a free program like Avogadro2 or MolView for the initial computation/ extraction/ export to a .mol file that can be converted into .pdb file format by other free programs like OpenBabel. 
 
-Example of the workflow goes like this: calculate model >> export .mol file >> import .mol into converter (Open Babel) >> export .pdb >> import .pdb into Blender (Atomic Blender) >> adjust model geometry attributes as needed >> configure render settings >> render >> export as video or image file. 
+Example of the workflow goes like this: calculate model >> export .mol file >> import .mol into converter (Open Babel) >> export .pdb >> import .pdb into Blender ([Atomic Blender](https://docs.blender.org/manual/en/latest/addons/import_export/mesh_atomic.html)) >> adjust model geometry attributes as needed >> configure render settings >> render >> export as video or image file. 
 (Make sure that the Atomic Blender add-on is enabled under EDIT tab >> PREFERENCES so that you can import a .pdb file. Additionally, the xyz file format may be substituted in place of the pdb since Blender can accept both).
 
 
