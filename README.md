@@ -16,13 +16,12 @@ Also, I have a free Flickr album of some rendered objects available: https://www
 
 _______________________________________________________________________________________________________________________________________________________________________
 
-Links to programs used in the workflow example:
-
-Avogadro2: https://github.com/openchemistry/avogadrolibs
-
-MolView: https://molview.org
-
-Open Babel: https://github.com/openbabel/openbabel/releases/tag/openbabel-3-1-1
+Links to programs used in the workflow example: |
+|-|
+| [Avogadro2](https://github.com/openchemistry/avogadrolibs) |
+| [MolView](https://molview.org) |
+| [Open Babel](https://github.com/openbabel/openbabel/releases/tag/openbabel-3-1-1) |
+| [Atomic Blender](https://docs.blender.org/manual/en/latest/addons/import_export/mesh_atomic.html) |
 
 _______________________________________________________________________________________________________________________________________________________________________
 
