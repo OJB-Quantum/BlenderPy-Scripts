@@ -37,6 +37,6 @@ ________________________________________________________________________________
 
 ![Caffeine in 4K with white bkgnd (2)](https://user-images.githubusercontent.com/88035770/228815450-ed9df092-184b-4560-8de3-5a4cabe3c296.png)
 
-
+![EM Waves 2K](https://github.com/user-attachments/assets/b777b243-23a1-428c-bacb-d915d4aa9093)
 
 If you need more learning resources on using Blender for scientific purposes, this is a great channel to start with: https://youtu.be/gAQxwNUH3JA
