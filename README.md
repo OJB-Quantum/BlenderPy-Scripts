@@ -39,4 +39,7 @@ ________________________________________________________________________________
 
 ![EM Waves 2K](https://github.com/user-attachments/assets/b777b243-23a1-428c-bacb-d915d4aa9093)
 
+![Gabriel's Horn 001](https://github.com/user-attachments/assets/bc2f22bd-c728-4eb0-b889-ada5cd6c8298)
+
+
 If you need more learning resources on using Blender for scientific purposes, this is a great channel to start with: https://youtu.be/gAQxwNUH3JA
