@@ -42,4 +42,7 @@ Also, I have a free Flickr album of some rendered objects available: https://www
 
 ![Gabriel's Horn 001](https://github.com/user-attachments/assets/474cac75-fa0f-4103-9e3d-99e162b93dbe)
 
+![414388327-6c86f859-76be-4f57-b9f8-89d89e9d2d03](https://github.com/user-attachments/assets/fa65c92f-3693-46ba-8e79-2ae78523d52e)
+
+
 If you need more learning resources on using Blender for scientific purposes, this is a great channel to start with: https://youtu.be/gAQxwNUH3JA
