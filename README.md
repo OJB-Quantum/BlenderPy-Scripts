@@ -14,7 +14,7 @@ Enjoy.
 
 ---
 
-Also, I have a free Flickr album of some rendered objects available: https://www.flickr.com/photos/194516106@N05/albums/72177720307046594
+Also, I have a free Flickr album of some rendered objects available: <https://www.flickr.com/photos/194516106@N05/albums>
 
 --- 
 
