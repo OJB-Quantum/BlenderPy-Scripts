@@ -15,7 +15,7 @@ a3 = 0.01168
 # --- CREATE CURVE DATA ---
 curve_data = bpy.data.curves.new(name="BHSpiralCurve", type='CURVE')
 curve_data.dimensions = '3D'
-curve_data.bevel_depth = 0.02  # curve thickness
+curve_data.bevel_depth = 0.05  # curve thickness
 curve_data.bevel_resolution = 4
 
 # Create a POLY spline and add (num_points) points
