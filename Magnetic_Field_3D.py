@@ -95,7 +95,7 @@ for theta in thetas:
         # Create Blender curve
         curve_data = bpy.data.curves.new(f"FieldLineCurve{fieldline_count}", type='CURVE')
         curve_data.dimensions = '3D'
-        curve_data.bevel_depth = 0.01  # 0.01 meters
+        curve_data.bevel_depth = 0.005  # 0.005 meters
         polyline = curve_data.splines.new('POLY')
         polyline.points.add(len(pts)-1)
         for k, co in enumerate(pts):
