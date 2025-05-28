@@ -46,5 +46,7 @@ Also, I have a free Flickr album of some rendered objects available: <https://ww
 
 ![Magnetic Fields from Script](https://github.com/user-attachments/assets/2d348168-bf17-4d21-b7ba-cc187686a9b5)
 
+![image](https://github.com/user-attachments/assets/9c0ba0b9-13d8-4ef3-8ccf-d7a0ff5dcb9d)
+
 
 If you need more learning resources on using Blender for scientific purposes, view more resources on the Blender-Common-Tools repository: <https://github.com/OJB-Quantum/Blender-Common-Tools>
