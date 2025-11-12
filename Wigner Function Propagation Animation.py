@@ -1,7 +1,10 @@
-# SPDX-License-Identifier: MIT
+
 """
 Blender animation: Wigner-function propagation on a 3-D surface mesh
 with on-screen time HUD at bottom-right of the camera view.
+
+Authored by Onri Jay Benally (2025)
+Open Access (CC-BY-4.0)
 
 Overview
 --------
