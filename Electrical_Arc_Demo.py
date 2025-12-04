@@ -25,7 +25,7 @@ EMISSION_STRENGTH = 200.0
 LIGHT_ENERGY = 1000.0
 
 
-# Helper – remove old frame-change handler (if present)
+# Helper
 def _clear_old_handler():
     """Remove any existing frame_change_pre handlers."""
     for h in bpy.app.handlers.frame_change_pre:
