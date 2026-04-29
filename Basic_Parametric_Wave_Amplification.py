@@ -1,7 +1,7 @@
-```
+'''
 Authored by Onri Jay Benally (2025)
 Open Access (CC-BY-4.0)
-```
+'''
 
 import bpy
 import math
