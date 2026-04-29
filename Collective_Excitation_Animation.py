@@ -1,9 +1,9 @@
 # BEC-like collective excitations: dynamic paint (waves) + wave modifiers
 # Optimized for Blender 4.5 (Cycles). Self-contained.
-```
+'''
 Authored by Onri Jay Benally (2025)
 Open Access (CC-BY-4.0)
-```
+'''
 
 import bpy
 import math
