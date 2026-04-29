@@ -48,5 +48,8 @@ Also, I have a free Flickr album of some rendered objects available: <https://ww
 
 ![image](https://github.com/user-attachments/assets/9c0ba0b9-13d8-4ef3-8ccf-d7a0ff5dcb9d)
 
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/dc2bacff-ebc8-4312-b2bb-a92fd9eab8de" />
+
+
 
 If you need more learning resources on using Blender for scientific purposes, view more resources on the Blender-Common-Tools repository: <https://github.com/OJB-Quantum/Blender-Common-Tools>
