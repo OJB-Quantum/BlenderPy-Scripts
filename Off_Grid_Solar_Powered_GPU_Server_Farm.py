@@ -46,7 +46,7 @@ class SceneConfig:
     # Render controls (requested)
     render_engine: str = "CYCLES"
     cycles_device: str = "CPU"
-    samples: int = 895
+    samples: int = 50
     resolution_x: int = 3840
     resolution_y: int = 2160
 
