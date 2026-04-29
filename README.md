@@ -1,4 +1,4 @@
-# BlenderPy-Scripts-for-Science
+# BlenderPy-Scripts
 For visualization of imported or generated data in Blende. 
 
 One example workflow for visualizing calculated molecular structures goes like this: calculate model >> export .mol file >> import .mol into converter (Open Babel) >> export .pdb >> import .pdb into Blender ([Atomic Blender](https://docs.blender.org/manual/en/latest/addons/import_export/mesh_atomic.html)) >> adjust model geometry attributes as needed >> configure render settings >> render >> export as video or image file. 
