@@ -50,7 +50,6 @@ Also, I have a free Flickr album of some rendered objects available: <https://ww
 
 <img width="3840" height="auto" alt="image" src="https://github.com/user-attachments/assets/dc2bacff-ebc8-4312-b2bb-a92fd9eab8de" />
 
-<img width="1920" height="auto" alt="image" src="https://github.com/user-attachments/assets/02828e2d-cff2-43f4-9b5e-9ad4a0d8599a" />
-
+<img width="1920" height="auto" alt="Glowing Ant Trails" src="https://github.com/user-attachments/assets/2614f27e-e277-4eb7-8dd0-b46ef7c000b5" />
 
 If you need more learning resources on using Blender for scientific purposes, view more resources on the Blender-Common-Tools repository: <https://github.com/OJB-Quantum/Blender-Common-Tools>
