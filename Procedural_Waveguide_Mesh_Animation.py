@@ -1,6 +1,6 @@
 """PEP 8 and PEP 257 compliant procedural waveguide animation generator.
 
-This script initializes a dual bar photonic geometry and applies an animated
+This script initializes a multi-bar photonic geometry and applies an animated
 emissive pulse through Blender Geometry Nodes. The pulse system supports a
 single pulse mode and a visible marching ant-trail mode.
 
@@ -14,6 +14,7 @@ import bpy
 # =============================================================================
 # CONTROL KNOBS
 # =============================================================================
+BAR_COUNT = 4
 BAR_LENGTH = 15.0
 BAR_SPACING = 2.0
 WAVEGUIDE_WIDTH = 0.4
@@ -92,6 +93,16 @@ def clamp_float(value: float, lower_bound: float, upper_bound: float) -> float:
 def clamp_int(value: int, lower_bound: int, upper_bound: int) -> int:
     """Clamp an integer to a closed interval."""
     return max(lower_bound, min(int(value), upper_bound))
+
+
+def get_effective_bar_count() -> int:
+    """Return a safe positive number of waveguide bars."""
+    return max(1, int(BAR_COUNT))
+
+
+def get_bar_y_offset(index: int, bar_count: int) -> float:
+    """Return the centered Y offset for one bar in the array."""
+    return (index - 0.5 * (bar_count - 1)) * BAR_SPACING
 
 
 def generate_waveguide_material() -> bpy.types.Material:
@@ -429,7 +440,7 @@ def create_ant_trail_mask(
     spacing: float,
     pulse_width: float,
 ) -> bpy.types.NodeSocket:
-    """Build the scalar pulse mask for single pulse or ant-trail mode."""
+    """Build the scalar pulse mask for ant-trail mode."""
     weighted_masks = []
 
     for index in range(pulse_count):
@@ -499,10 +510,37 @@ def add_geometry_output_socket(tree: bpy.types.NodeTree) -> None:
         tree.outputs.new("NodeSocketGeometry", "Geometry")
 
 
+def create_bar_line_nodes(
+    tree: bpy.types.NodeTree,
+) -> bpy.types.Node:
+    """Create centered parallel line curves and join them into one geometry."""
+    nodes = tree.nodes
+    links = tree.links
+    bar_count = get_effective_bar_count()
+
+    node_join = nodes.new("GeometryNodeJoinGeometry")
+    node_join.location = (-600, 0)
+
+    for index in range(bar_count):
+        y_offset = get_bar_y_offset(
+            index=index,
+            bar_count=bar_count,
+        )
+
+        node_line = nodes.new("GeometryNodeCurvePrimitiveLine")
+        node_line.location = (-850, -120 * index)
+        node_line.inputs["Start"].default_value = (0.0, y_offset, 0.0)
+        node_line.inputs["End"].default_value = (BAR_LENGTH, y_offset, 0.0)
+
+        links.new(node_line.outputs["Curve"], node_join.inputs[0])
+
+    return node_join
+
+
 def construct_procedural_geometry(material: bpy.types.Material) -> None:
-    """Generate dual bar geometry and route the dynamic pulse attribute."""
+    """Generate multi-bar geometry and route the dynamic pulse attribute."""
     mesh_data = bpy.data.meshes.new("WaveguideMesh")
-    obj = bpy.data.objects.new("DualWaveguide", mesh_data)
+    obj = bpy.data.objects.new("MultiBarWaveguide", mesh_data)
     bpy.context.collection.objects.link(obj)
 
     modifier = obj.modifiers.new(name="PhotonicNodes", type="NODES")
@@ -512,35 +550,30 @@ def construct_procedural_geometry(material: bpy.types.Material) -> None:
     nodes = tree.nodes
     links = tree.links
 
-    node_line = nodes.new("GeometryNodeCurvePrimitiveLine")
-    node_line.inputs["Start"].default_value = (0.0, 0.0, 0.0)
-    node_line.inputs["End"].default_value = (BAR_LENGTH, 0.0, 0.0)
-
-    node_transform = nodes.new("GeometryNodeTransform")
-    node_transform.inputs["Translation"].default_value = (
-        0.0,
-        BAR_SPACING,
-        0.0,
-    )
-
-    node_join = nodes.new("GeometryNodeJoinGeometry")
+    node_join = create_bar_line_nodes(tree)
 
     node_resample = nodes.new("GeometryNodeResampleCurve")
+    node_resample.location = (-350, 0)
     node_resample.inputs["Count"].default_value = RESAMPLE_COUNT
 
     node_profile = nodes.new("GeometryNodeCurvePrimitiveQuadrilateral")
+    node_profile.location = (150, -250)
     node_profile.inputs["Width"].default_value = WAVEGUIDE_WIDTH
     node_profile.inputs["Height"].default_value = WAVEGUIDE_HEIGHT
 
     node_curve_to_mesh = nodes.new("GeometryNodeCurveToMesh")
+    node_curve_to_mesh.location = (350, 0)
 
     node_spline_param = nodes.new("GeometryNodeSplineParameter")
-    node_scene_time = nodes.new("GeometryNodeInputSceneTime")
+    node_spline_param.location = (-350, -250)
 
-    node_multiply = create_math_node(tree, "MULTIPLY")
+    node_scene_time = nodes.new("GeometryNodeInputSceneTime")
+    node_scene_time.location = (-350, -450)
+
+    node_multiply = create_math_node(tree, "MULTIPLY", (-150, -450))
     node_multiply.inputs[1].default_value = PULSE_SPEED
 
-    node_modulo = create_math_node(tree, "MODULO")
+    node_modulo = create_math_node(tree, "MODULO", (50, -450))
     node_modulo.inputs[1].default_value = 1.0
 
     if ANT_TRAIL_MODE:
@@ -552,23 +585,23 @@ def construct_procedural_geometry(material: bpy.types.Material) -> None:
         blur_iterations = BLUR_ITERATIONS
 
     node_blur = nodes.new("GeometryNodeBlurAttribute")
+    node_blur.location = (50, -100)
     node_blur.data_type = "FLOAT"
     node_blur.inputs["Iterations"].default_value = blur_iterations
 
     node_store = nodes.new("GeometryNodeStoreNamedAttribute")
+    node_store.location = (150, 0)
     node_store.data_type = "FLOAT"
     node_store.domain = "POINT"
     node_store.inputs["Name"].default_value = "PulseMask"
 
     node_material = nodes.new("GeometryNodeSetMaterial")
+    node_material.location = (600, 0)
     node_material.inputs["Material"].default_value = material
 
     node_output = nodes.new("NodeGroupOutput")
+    node_output.location = (850, 0)
     add_geometry_output_socket(tree)
-
-    links.new(node_line.outputs["Curve"], node_join.inputs[0])
-    links.new(node_line.outputs["Curve"], node_transform.inputs["Geometry"])
-    links.new(node_transform.outputs["Geometry"], node_join.inputs[0])
 
     links.new(node_join.outputs["Geometry"], node_resample.inputs["Curve"])
 
