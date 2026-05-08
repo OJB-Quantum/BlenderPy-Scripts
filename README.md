@@ -54,6 +54,8 @@ Also, I have a free Flickr album of some rendered objects available: <https://ww
 
 <img width="800" height="auto" alt="ezgif-82a152ce8693a17b" src="https://github.com/user-attachments/assets/6e875e69-4219-4531-8839-6543550e2d5f" />
 
+<img width="800" height="auto" alt="ezgif-868255eee5c5fc7f" src="https://github.com/user-attachments/assets/9c7e309f-582a-4d33-8e26-6b2d897bcb71" />
+
 <img width="800" height="auto" alt="ezgif-87066e6f304f0071" src="https://github.com/user-attachments/assets/6bb17a60-d6b5-43e3-a8ed-dc91ad025539" />
 
 
